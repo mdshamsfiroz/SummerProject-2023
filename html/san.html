@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiple Action URLs for Buttons</title>
+</head>
+<body>
+
+<h2>Form with Buttons</h2>
+
+<form id="myForm" method="post" action="">
+    <label for="name">Name:</label>
+    <br>
+    <button type="button" onclick="resetData()">Reset Data</button>
+   
+    <br>
+    <label for="email">Email:</label>
+    <br>
+    <button type="button" onclick="processData()">Process Data</button>
+   
+</form>
+
+<script>
+    function processData() {
+        // Do some processing here
+        document.getElementById('myForm').action = '/cgi-bin/process_script.cgi';
+        document.getElementById('myForm').submit();
+    }
+
+    function resetData() {
+        // Do some resetting here
+        document.getElementById('myForm').action = '/cgi-bin/reset_script.cgi';
+        document.getElementById('myForm').submit();
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AWS Service Cloud</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+  }
+  .container {
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  h1 {
+    margin-top: 0;
+    font-size: 36px;
+    color: #333;
+  }
+  .cloud-icon {
+    font-size: 56px;
+    margin-bottom: 20px;
+    color: #007bff;
+  }
+  .service-button {
+    margin: 10px;
+    padding: 12px 24px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .service-button:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+  .cloud-image {
+    width: 120px;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="cloud-icon">☁️</div>
+  <img src="https://codelo.s3.ap-south-1.amazonaws.com/amazon-web-services-down-20140-unscreen.gif" alt="AWS GIF" class="cloud-image">
+  <h1>Welcome to AWS Service Cloud</h1>
+  <p>Your gateway to powerful cloud services</p>
+  <button class="service-button" id="ec2Button"><a href="ec2.html">Launch EC2</a></button>
+  <button class="service-button" id="transcribeButton"><a href="awsimg.html">Audio Recognition</a></button>
+  <button class="service-button" id="textToSpeechButton"><a href="#">Text-to-Speech</a></button>
+  <button class="service-button" id="s3Button"><a href="awss3.html">S3 Bucket</a></button>
+  <button class="service-button" id="translateButton"><a href="trans.html">Translate</a></button>
+</div>
+
+<script>
+  // You can add functionality to these buttons using JavaScript here
+  
+  // Example: Add click event listener for EC2 button
+  document.getElementById("ec2Button").addEventListener("click", function() {
+    // Implement your EC2 launch logic here
+    alert("Launching EC2 instance!");
+  });
+  
+  // Example: Add click event listener for Transcribe button
+  document.getElementById("transcribeButton").addEventListener("click", function() {
+    // Implement your Transcribe logic here
+    alert("Transcribing audio!");
+  });
+  
+  // Example: Add click event listener for Text-to-Speech button
+  document.getElementById("textToSpeechButton").addEventListener("click", function() {
+    // Implement your Text-to-Speech logic here
+    alert("Converting text to speech!");
+  });
+  
+  // Example: Add click event listener for S3 button
+  document.getElementById("s3Button").addEventListener("click", function() {
+    // Implement your S3 bucket logic here
+    alert("Accessing S3 bucket!");
+  });
+
+  // Example: Add click event listener for Translate button
+  document.getElementById("translateButton").addEventListener("click", function() {
+    // Implement your translation logic here
+    alert("Translate content!");
+  });
+  
+</script>
+</body>
+</html>

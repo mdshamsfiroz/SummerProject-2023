@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Sender</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="password"], textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        button {
+            padding: 8px 15px;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 3px;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Email Sender</h2>
+        <form action="http://18.191.139.184/cgi-bin/Email-cgi.py"><br />
+    Enter your Receiver: <input type="text" name="r"><br />
+    Enter your Subject: <input type="text" name="s"><br />
+    Enter your body: <br /><textarea rows="20" cols="30" name="b">Enter your message here</textarea><br />
+    <br /><input type="submit" value="Send">
+</form>
+    </div>
+</body>
+</html>

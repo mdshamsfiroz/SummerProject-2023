@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googlechoices.com/css2?family=Big+Shoulders+Stencil+Text:wght@100&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="docker.css">
+
+    <title>Docker Menu</title>
+    <link rel="icon" href="https://codelo.s3.ap-south-1.amazonaws.com/gifgit-unscreen.gif" type = "image/x-icon">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://codelo.s3.ap-south-1.amazonaws.com/gifgit-unscreen.gif" alt="" width="350" height="200">
+            <h2 class="heading">Docker Menu</h2>
+        </div>
+
+        <div class="cards">
+
+            <div class="card" id="card1">
+                <div class="upper">
+                    <form action="http://18.191.139.184/cgi-bin/docker.py" method="POST">
+                        <p>Install and Configure Docker</p>
+                        <input type="hidden" name="choice" value="1">
+                        <button type="submit">Start Docker</button>
+                    </form>
+
+                    <form action="http://18.191.139.184/cgi-bin/docker.py" method="POST">
+                        <p> Docker Service</p>
+                        <input type="radio" name="state" value="start" class="radio" id="radio">
+                       <label for="start">Start</label>
+                      <input type="radio" name="state" value="stop" class="radio" id="radio">
+                        <input type="hidden" name="choice" value="13">
+                      <label for="stop">Stop</label><br>
+                      <button type="submit">Submit</button>
+                    </form>
+                    <form action="http://18.191.139.184/cgi-bin/docker.py" method="POST">
+                        <p>Make Service Permanent</p>
+                        <input type="hidden" name="choice" value="2">
+                        <input type="radio" name="state" value="enable" class="radio" id="radio">
+                       <label for="start">Yes</label>
+                      <input type="radio" name="state" value="disable" class="radio" id="radio">
+                        
+                      <label for="stop">No</label><br>
+                        <button type="submit">Make Permanent</a></button>
+                    </form>
+                    <form action="http://18.191.139.184/cgi-bin/docker.py" method="POST">
+                        <p>Service Status</p>
+                        <input type="hidden" name="choice" value="3">
+                        <button type="submit">See Status</button>
+                    </form>
+                </div>
+                <hr>
+                <div class="lower">
+                    <form action="http://18.191.139.184/cgi-bin/docker.py" method="POST">
+                        <p>List Docker Image</p>
+                        <input type="hidden" name="choice" value="4">
+
+                        <button type="submit">See Images</button>
+                    </form>
+                    <form action="http://18.191.139.184/cgi-bin/docker.py" method="POST">
+                        <p>List All Container</p>
+                        <input type="hidden" name="choice" value="5">
+                        <button type="submit">See Containers</button>
+                    </form>
+                    <form action="http://18.191.139.184/cgi-bin/docker.py" method="POST">
+
+                        <p>List All Running Containers</p>
+                        <input type="hidden" name="choice" value="6">
+                        <button type="submit">Running Containers</button>
+                    </form>
+                </div>
+            </div>
+
+
+            <div class="card" id="card2">
+                <form action="http://18.191.139.184/cgi-bin/docker.py">
+
+                    <p>Pull Image From Docker Hub</p>
+                    <input type="text" Placeholder="Enter Image Name" name="image" class="input">
+                    <input type="text" Placeholder="Enter Image Tag" name="tag" class="input" id="mytext"
+                        onfocus="myFunction()">
+                    <input type="hidden" name="choice" value="7">
+                    <button type="submit">Pull Image</button>
+                </form>
+            </div>
+            <div class="card" id="card3">
+                <form action="http://18.191.139.184/cgi-bin/docker.py" method="POST">
+                    <p>Launch a new Conatiner</p>
+                    <input type="text" Placeholder=" Container Name" name="container" class="input">
+                    
+                    <input type="text" Placeholder="Image Name" name="image" class="input">
+                    
+                    <input type="text" Placeholder="Image Tag" name="tag" class="input">
+                   
+                    <input type="text" Placeholder="Port" name="port" class="input">
+                    <input type="hidden" name="choice" value="8">
+                    
+                    <button type="submit">Launch</button>
+                </form>
+            </div>
+            <div class="card" id="card4">
+                <form action="http://18.191.139.184/cgi-bin/docker.py" method="POST">
+                    <p>Commit a custom Conatiner Image</p>
+                    <input type="text" Placeholder="Enter Container name to make Image" name="container" class="input">
+                    
+                    <input type="text" Placeholder="Give name to the Images" name="image" class="input">
+                    
+                    <input type="text" Placeholder="Enter The Tag" name="tag" class="input">
+                    <input type="hidden" name="choice" value="9">
+                    <button type="submit">Create Image</button>
+                </form>
+            </div>
+            <div class="card" id="card5">
+                <form action="http://18.191.139.184/cgi-bin/docker.py" method="POST">
+                    <p>Start/Stop Conatiner</p>
+                    <input type="text" placeholder="Enter the Conatiner Name" name="container" class="input">
+                    
+                    <input type="radio" name="state" value="start" class="radio">
+                    
+                    <label for="male">Start</label><br>
+                    <input type="radio" name="state" value="stop" class="radio">
+                    <input type="hidden" name="choice" value="10">
+                    <label for="male">Stop</label><br>
+                    <button type="submit">Submit</button>
+
+                </form>
+
+
+            </div>
+            <div class="card" id="card6">
+                <form action="http://18.191.139.184/cgi-bin/docker.py" method="POST">
+                    <p>Remove an Image or All Images</p>
+                    <input type="text" Placeholder="Enter name of Image" name="image" class="input"> 
+                    <input type="text" Placeholder="Enter name of Tag" name="tag" class="input">    
+                    <input type="hidden" name="choice" value="11">
+                    <button type="submit">Remove Image</button>
+                </form>
+            </div>
+            <div class="card" id="card7">
+                <form action="http://18.191.139.184/cgi-bin/docker.py" method="POST">
+                <p>Remove a Conatiner or All Containers</p>
+                <input type="text" Placeholder="Enter name of Container" name="container" class="input">
+                <input type="hidden" name="choice" value="12">
+                <button type="submit">Remove Conatiner</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

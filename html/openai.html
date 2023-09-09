@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LangChain AI Interaction</title>
+</head>
+<body>
+    <h1>LangChain AI Interaction</h1>
+    <form id="prompt-form">
+        <label for="prompt">Enter Your Prompt:</label><br>
+        <textarea id="prompt" name="prompt" rows="4" cols="50"></textarea><br>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="response">
+        <!-- The AI-generated response will be displayed here -->
+    </div>
+
+    <script>
+        document.getElementById('prompt-form').addEventListener('submit', async (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const prompt = formData.get('prompt');
+
+            // Make an asynchronous request to the CGI script
+            const response = await fetch('http://18.191.139.184/cgi-bin/lang.py ', {
+                method: 'POST',
+                body: new URLSearchParams({ prompt }), // Send the prompt as a parameter
+            });
+
+            const responseData = await response.text();
+            document.getElementById('response').innerHTML = responseData;
+        });
+    </script>
+</body>
+</html>

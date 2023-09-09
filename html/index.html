@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INDIA search</title>
+<script>
+function lw() {
+    var xhr = new XMLHttpRequest();
+    var mycmd = document.getElementById("in1").value;
+    xhr.open("GET", "http://18.191.139.184//cgi-bin/lw.py?c=" + mycmd, true);
+    xhr.send();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            document.getElementById("p1").innerHTML = this.responseText;
+        }
+    };
+}
+</script>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+.search-container {
+    text-align: center;
+    padding: 100px;
+}
+.logo {
+    width: 272px;
+    height: 92px;
+    margin-bottom: 20px;
+}
+.search-box {
+    width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 24px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.search-button {
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    padding: 10px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.button {
+    background-color: #857373;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+.button:hover {
+    background-color: #352d2d;
+}
+.button-text {
+    margin-top: 20px;
+}
+.big-text {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.button-gif {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+</style>
+</head>
+<body>
+<div class="search-container">
+    <div class="big-text">TEAM</div>
+    <img src="https://codelo.s3.ap-south-1.amazonaws.com/verticallogo.jpeg" alt="INDIA Logo" class="logo">
+    <form action="https://www.google.com/search" method="GET" target="_blank">
+        <input id="in1"   onkeyup="lw()"  type="text" name="q" class="search-box" placeholder="Search or type">
+        <pre>
+                <p id="p1" >Here is the Solution of your Question...</p>
+        </pre>
+    </form><br>
+    <div class="button-group">
+        <a href="mail.html" class="button">
+            <span>Mail</span>
+            <img src="https://codelo.s3.ap-south-1.amazonaws.com/email.gif" alt="Mail GIF" class="button-gif">
+        </a>
+        <a href="docker.html" class="button">
+            <span>Docker</span>
+            <img src="https://codelo.s3.ap-south-1.amazonaws.com/gifgit-unscreen.gif" alt="Docker GIF" class="button-gif">
+        </a>
+        <a href="aws.html" class="button">
+            <span>AWS</span>
+            <img src="https://codelo.s3.ap-south-1.amazonaws.com/amazon-web-services-down-20140-unscreen.gif" alt="AWS GIF" class="button-gif">
+        </a>
+        <a href="openai.html" class="button">
+            <span>AI</span>
+            <img src="https://codelo.s3.ap-south-1.amazonaws.com/langchain.gif" alt="AI GIF" class="button-gif">
+        </a>
+        <a href="lookup.html" class="button">
+            <span>Web Technologies</span>
+            <img src="https://codelo.s3.ap-south-1.amazonaws.com/web-technology.gif" alt="AI GIF" class="button-gif">
+        </a>
+    </div>
+</div>
+</body>
+</html>
